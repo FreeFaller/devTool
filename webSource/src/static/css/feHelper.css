@@ -1,0 +1,86 @@
+//feHelper css
+.FEtitle {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+    .FEtitle-label {
+        line-height: 14px;
+        font-size: 14px;
+        font-weight: bold;
+        padding-left: 10px;
+        border-left: 3px solid #2d8cf0;
+    }
+}
+
+.FEsearchForm {
+    padding: 15px 0;
+    .FEsearchForm-item {
+        display: inline-block;
+        margin: 0 10px 10px 0;
+    }
+    .FEsearchForm-title {
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .FEsearchForm-btn {
+        display: inline-block;
+        margin-left: 15px;
+    }
+    .FEsearchForm-reset-btn {
+        margin-left: 10px;
+    }
+    .ivu-date-picker,
+    .ivu-input-wrapper,
+    .ivu-select {
+        display: inline-block;
+        width: 150px;
+    }
+}
+
+.FEmodalBtnBox {
+    .FEmodalBtn {
+        float: right;
+        height: 50px;
+    }
+    .ivu-btn {
+        margin-right: 10px;
+    }
+}
+
+.FEmodalBtnBox:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+.FEtoolBtnBar {
+    position: relative;
+    .FEtoolBtn {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.FEpageBox {
+    padding: 20px 0;
+    .ivu-page {
+        float: right;
+    }
+}
+
+.FEpageBox:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0
+}
+
+.FEtagGroup {
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: 10px 0;
+}

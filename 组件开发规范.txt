@@ -1,0 +1,66 @@
+feHelper组件开发规范
+
+1、组件命名
+所有组件以英文名（单词间用_连接）为文件夹，放置在fe-helper-store的根目录下
+
+2、组件文件结构
+一个feHelper组件需要包含以下内容
+index.vue （必需）
+info文件夹 （必需）
+其他依赖文件 （非必需）
+
+index.vue 
+此文件为组件的入口文件，文件名必须为index.vue
+
+文件代码会直接与原项目文件合并，FEHPVB为变量替换关键字，此文件中的所有全局变量前应加这个前缀
+
+此文件对feHelper组件资源的引用,引用路径为@feHelper+feHelper组件英文名+依赖文件
+
+样式建议用import方式引入，不要写在<style></style>中
+
+<template>
+<Select v-model="FEHPVBmodel1" style="width:200px">
+<Option v-for="item in FEHPVBcityList" :value="item.value">{{ item.label }}</Option>
+</Select>
+<FEHPVBSearch />
+</template>
+<script>
+//fehelper组件引用
+import FEHPVBSearch from '@feHelper/csearch/index.vue'
+//依赖文件引入
+import '@feHelper/p_input/style.css'
+export default {
+data(){
+return {
+FEHPVBcityList: [
+{
+value: 'New York',
+label: 'New York'
+}
+],
+FEHPVBmodel1: ''
+}
+},
+components:{
+FEHPVBSearch
+}
+}
+</script>
+<style>
+
+</style>
+
+ 
+
+info文件夹
+info文件夹包括以下三个文件：
+info.json 
+{
+      "type": "基础组件", //分类 
+      "cName": "输入框", //中文名
+      "name": "input", //英文名(与目录名相同)
+      "author": "xcshang", //开发者（CORP邮箱前缀）
+      "desc": "简介信息"  //组件简介
+}
+view.png 组件预览图片（400px*300px）
+readMe.md 组件使用文档

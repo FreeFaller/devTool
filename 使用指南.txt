@@ -1,0 +1,20 @@
+
+1、下载feHelper组件库
+ssh://git@g.hz.netease.com:22222/op-fe/fe-helper-store.git
+
+
+2、安装fe-helper-app应用
+ssh://git@g.hz.netease.com:22222/op-fe/fe-helper-app.git
+
+
+3、old类型开发项目webpack配置增加 @feHelper 别名配置到alias，指向新建目录feHelper
+alias: {
+'@feHelper': resolve('./src/feHelper'), //@feHelper为固定别名，不能改成其他的
+}
+
+4、yarn start 启动fe-helper-app应用
+
+
+
+
+
